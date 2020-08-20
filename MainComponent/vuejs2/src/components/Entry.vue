@@ -1,5 +1,10 @@
 <template>
-
-    <div>MeuArquivo.txt</div>
-
+    <div>{{name}}</div>
 </template>
+
+
+<script>
+export default {
+  props: ["name"]
+}
+</script>

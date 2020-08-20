@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <fileview/>
+    <entrylist :entriesListData="this.fileList" />
   </div>
 </template>
 
 <script>
-import fileview from './components/Entry.vue'
+import entrylist from './components/EntryList.vue';
 
 export default {
   name: 'App',
   components: {
-    fileview
+    entrylist
+  },
+  data() {
+    return {
+      fileList: [
+          {id: 1, name: "Anotacoes.txt"}, 
+          {id: 2, name: "Arquivo2.txt" }
+        ]
+    };
   }
 }
 </script>
